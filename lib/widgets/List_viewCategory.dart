@@ -10,31 +10,31 @@ class Category_list_view extends StatelessWidget {
   final List<Model> categoryies = const [
     Model(
       image: 'assets/business.avif',
-      text: 'Business',
+      text: 'business',
     ),
     Model(
       image: 'assets/entertaiment.avif',
-      text: 'Entertaiment',
+      text: 'entertainment',
     ),
     Model(
       image: 'assets/general.avif',
-      text: 'General',
+      text: 'general',
     ),
     Model(
       image: 'assets/health.avif',
-      text: 'Health',
+      text: 'health',
     ),
     Model(
       image: 'assets/sports.avif',
-      text: 'Sports',
+      text: 'sports',
     ),
     Model(
       image: 'assets/science.avif',
-      text: 'Science',
+      text: 'science',
     ),
     Model(
       image: 'assets/technology.jpeg',
-      text: 'Technology',
+      text: 'technology',
     ),
   ];
   @override
@@ -42,7 +42,7 @@ class Category_list_view extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.builder(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemCount: categoryies.length,
           itemBuilder: (context, index) {
