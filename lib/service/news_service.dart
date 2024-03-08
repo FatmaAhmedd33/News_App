@@ -29,7 +29,7 @@ class NewsService {
         articlesList.add(articlesModel);
       }
       return articlesList;
-    } on Exception catch (e) {
+    } on Exception {
       return [];
     }
   }

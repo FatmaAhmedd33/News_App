@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:news_app/widgets/news_list_view_builder.dart';
 
 class CardView extends StatelessWidget {
-  const CardView({super.key, required this.category});
-  final String category;
+  const CardView({super.key, required this.categorys});
+  final String categorys;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: CustomScrollView(
         slivers: [
           NewsListViewBuilder(
-            category: 'category',
+            category: categorys,
           )
         ],
       ),

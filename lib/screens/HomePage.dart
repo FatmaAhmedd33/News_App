@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
         ),
         body: const CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: (Category_list_view())),
+            SliverToBoxAdapter(child: (CategoryListView())),
             SliverToBoxAdapter(
                 child: (SizedBox(
               height: 10,

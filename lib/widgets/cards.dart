@@ -10,10 +10,15 @@ class Cards extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return  CardView(category: categoryies.text,);
-        },),);
-
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) {
+              return CardView(
+                categorys: categoryies.text,
+              );
+            },
+          ),
+        );
       },
       child: Container(
         margin: const EdgeInsets.only(right: 20),

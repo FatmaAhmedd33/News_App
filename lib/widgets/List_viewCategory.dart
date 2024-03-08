@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:news_app/classes/card_model.dart';
 
 import 'cards.dart';
 
-class Category_list_view extends StatelessWidget {
-  const Category_list_view({
+class CategoryListView extends StatelessWidget {
+  const CategoryListView({
     super.key,
   });
   final List<Model> categoryies = const [
@@ -42,7 +42,7 @@ class Category_list_view extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.builder(
-        physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemCount: categoryies.length,
           itemBuilder: (context, index) {
