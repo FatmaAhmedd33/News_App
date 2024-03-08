@@ -4,4 +4,10 @@ class ArticlesModel {
   final String? subTitle;
   ArticlesModel(
       {required this.image, required this.title, required this.subTitle});
-}
+  factory ArticlesModel.fromJson(json) {
+    return ArticlesModel(
+        image: json['urlToImage'],
+        title: json['title'],
+        subTitle: json['description']);
+  }
+  }

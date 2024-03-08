@@ -6,7 +6,8 @@ class NewsService {
 
   NewsService(Dio dio);
 
-  Future<List<ArticlesModel>> getTopHeadLines({ required String category}) async {
+  Future<List<ArticlesModel>> getTopHeadLines(
+      {required String category}) async {
     //make the datatype future bec. it an syn function
     try {
       final Response response = await dio.get(
@@ -21,10 +22,7 @@ class NewsService {
       // to really work 2nd one must be sure this datatype is correct
       List<ArticlesModel> articlesList = [];
       for (var article in articles) {
-        ArticlesModel articlesModel = ArticlesModel(
-            image: article['urlToImage'],
-            title: article['title'],
-            subTitle: article['description']);
+        ArticlesModel articlesModel = ArticlesModel.fromJson(article);
 
         articlesList.add(articlesModel);
       }
